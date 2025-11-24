@@ -3,7 +3,7 @@
  -CLI: command line interface, type in the name of program to run it rather than click buttons.    
  
 ## Source code, compiler and machine code  
-![I/O](/Users/angelaren/Documents/Programming notes/Generals/CS50x/IO.jpeg)  
+![IO Diagram](IO.jpeg)  
   
 -The document ```hello.c``` we made is where we write our source code. After writing the source code, we need to convert it into machine code that can be run by our computer. This is where we induce the compiler part, ```make hello```.  
 
