@@ -1,8 +1,8 @@
-##Visual Studio Code for CS50
+## Visual Studio Code for CS50
  -GUI: graphical user interface, clicking buttons.  
  -CLI: command line interface, type in the name of program to run it rather than click buttons.    
  
-##Source code, compiler and machine code  
+## Source code, compiler and machine code  
 ![I/O](/Users/angelaren/Documents/Programming notes/Generals/CS50x/IO.jpeg)  
   
 -The document ```hello.c``` we made is where we write our source code. After writing the source code, we need to convert it into machine code that can be run by our computer. This is where we induce the compiler part, ```make hello```.  
@@ -11,7 +11,7 @@
  
  -The ```./hello``` will read the machine code compiled by make and execute it saying ```hello, world```. 
  
-###Basic syntax in C  
+### Basic syntax in C  
 -To display any texts on the screen, we use a build-in function called ```printf```.  
 
     printf("hello, world\n");  
@@ -28,12 +28,12 @@
 	\'  print a single quote
 	\\  print a backslash  
 	
-##Header files  
+## Header files  
   
  -Any files that end in ```.h``` is what we're going to call a header file. It tells the compile that you want to use the capabilities of a *library* called ```stdio.h```, by including the code ```#include <stdio.h>```at the start of the code.  
  -A library is a collection of code that someone else wrote for you, it's a package of existing functions you can acess by including header files.  
  
-###Example of functions from library  
+### Example of functions from library  
  
      // get_string and printf with %s
 
@@ -58,7 +58,7 @@
  
  ***Remember to add a semi-colon at end of the statements to terminate it.***  
  
-##Conditionals  
+## Conditionals  
     // Compare integers
 
 	if (x < y)
@@ -79,7 +79,7 @@
  -The data type ```char```is a type of data that represents a single character or letter, it should be in *single*
  -The operators in C are ```||``` which stands for *or* and ```&&``` which stands for *and*.  
  
-##Type of Loops
+## Type of Loops
  -While loop:  
  
 	#include <stdio.h>
@@ -112,7 +112,7 @@
  
  -Whenever the code runs out of controll and start to get into an infinite loops, press ```ctrl+c``` to break out of the program.  
  
-##Functions  
+## Functions  
  -When writing codes, it is encouraged to put the function ```main``` at the top of the program, so we put the user-defined funciton to the bottom or after the ```main``` function.  But how do we define a function that is needed inside the ```main``` function, if C can only follow a flow of codes that are in order?  
  
  -By solving this problem, we write down the first line of our function (with semicolon added), which make it a *prototype* of the function.  
@@ -148,7 +148,7 @@
 	
 -What should we do when the user enters unwanted values to keep asking them for a correct value?  
 
-###do...while loop  
+### do...while loop  
 不像 for 和 while 循环，它们是在循环头部测试循环条件。在 C 语言中，do...while 循环是在循环的尾部检查它的条件。  
 
 do...while 循环与 while 循环类似，但是 do...while 循环会确保至少执行一次循环。   
