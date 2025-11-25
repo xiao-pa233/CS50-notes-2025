@@ -196,4 +196,14 @@ do...while 循环与 while 循环类似，但是 do...while 循环会确保至�
 
 -If we want to use a variable many times in different part of functions, we can declare a variable in advance outside of one scope, but then define it, initialise it elsewhere.  
   
-***-This is the recommended way of writing codes in C, we declare a variable without giving it any value initially, then, in a specific part of function, we proceed to give it a value. By doing this we ensure the variable can be reached by other functions.***
+***-This is the recommended way of writing codes in C, we declare a variable without giving it any value initially, then, in a specific part of function, we proceed to give it a value. By doing this we ensure the variable can be reached by other functions.***  
+
+
+## Type Casting  
+ -We can convert the data type from one to another using so-called *type casting*.  
+ -We can state ealier in the program that the variable is equal to the other type. But we can also use another syntax to convert data type later rather than change it at beginning of input.  
+ 
+    printf("%.50f\n", (float) x/y);
+    //the syntax is (type)
+    
+  ***It is important to cast the data BEFORE division decimals***
