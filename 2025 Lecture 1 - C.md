@@ -207,3 +207,5 @@ do...while 循环与 while 循环类似，但是 do...while 循环会确保至�
     //the syntax is (type)
     
   ***It is important to cast the data BEFORE division decimals***
+
+-Whenever a ```float``` data type is involved in arithmetic with ```integer```, the output will always be in ```float``` data type.
