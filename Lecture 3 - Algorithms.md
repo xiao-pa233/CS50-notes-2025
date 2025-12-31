@@ -7,12 +7,12 @@
 ## Searching   
  -Using the array as an example, think the array metaphorically like a series of seven lockers.  
  
-  ![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/lockers.png) 
+  ![](images/lockers.png) 
   
  -We can imagine that we have an essential problem of wanting to know 'is the number 50 inside an array?'. A computer must look at each locker to be able to see if the number 50 is inside. We call this process of finding such a number, character, string, or other item searching. 
  -We can hand over this task to an algorithem, wherein our algorithm will search through our lockers to see if the number 50 is behind one of the doors, returning the value ```true``` or ```false```.   
   
- ![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/process.jpeg)  
+ ![](images/process.jpeg)  
  
  -As showen above, there will always going to be some kind of algorithm for solving this problem.  
 
@@ -57,7 +57,7 @@
  -In short words, by using the big O notation, we are describing the *general shape* of growth but not precise measurements.  
  -So when someone says "this algorithm is O(n log n)," they're saying "it scales roughly like n times log n, give or take some details I'm not worrying about."  
  
-   ![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/running_time.png)  
+   ![](images/running_time.png)  
    
  -In the above graph, the first algorithm is 𝑂⁡(𝑛) or in the order of n. The second is in 𝑂⁡(𝑛) as well. The third is in 𝑂⁡(log⁡𝑛). 
  
@@ -193,7 +193,7 @@
 
 -***In here, recursion can improve efficiency by breaking down a problem into smaller subproblems, where each recursive call works on a reduced portion of the data, excluding parts that have already been processed or determined to be irrelevant.***
 
-![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/recursion.png)  
+![](images/recursion.png)  
 
 -Implicityly to search the left half and search the right half means shorten the list by half, and in this algorithm we do this again and again, which is applying the same logic to a smaller data set. By doing this we are shrinking the problem, the problem is getting smaller, so eventually we will get to a positive or negative result.  
 
@@ -210,7 +210,7 @@
  -For recursive, the function calls itself with progressively smaller/simpler inputs. There must have a base case (stopping condition) or runs forever. ***Recursion works backwards:*** it go all the way to the base case first, then calculate on the way back. Each funciton call stays in memory until it returns, so it is slower.  
  -Sometimes, one problem is just better suited for one or the other. 
  
- ![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/backwards.png)  
+ ![](images/backwards.png)  
  
 ### Pyramid structure  
  -The  physical structure of a pyramid of height 4 can be see as recursive. The pyramid of height 4 is a pyramid of height 3 plus 1 more layer of bricks, a pyramid of height 3 is a pyramid of height 2 with one more layer of bricks... and a pyramid of height 1 is just a single brick, which is the last statement and can be seen as a base case.  
@@ -218,14 +218,14 @@
  
 ## Flowcharts(?) of the recursion  
 
-![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/Factorial.png)  
+![](images/Factorial.png)  
 
-![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/Pyramid.jpeg)  
+![](images/Pyramid.jpeg)  
 
 
 ## Merge Sort  
 
-![](/Users/angelaren/Documents/Programming notes/Generals/CS50x/merge_sort.png)
+![](images/merge_sort.png)
 
 
 ## Ways of sorting  
