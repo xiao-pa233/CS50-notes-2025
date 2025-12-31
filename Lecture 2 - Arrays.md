@@ -201,7 +201,7 @@
  -When a program exits without error, a status code of ```0``` is provided to the computer. Often, when an error occurs that results in the program ending, a status of ```1``` is provided by the computer. This is because if program runs successful it runs, but the error can varies so we can use positive or negative values.  
  
 ## Cryptography  
- ![](cryptography.png)  
+ ![cryp](images/cryptography.png)  
  
  -Cryptography is the art of ciphering and deciphering a message.  
  -```plaintext``` and a ```key``` are provided to a ```cipher```, resulting in ciphered text. 
