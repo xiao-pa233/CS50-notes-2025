@@ -235,17 +235,17 @@
     	*b = tmp;
 	}  
 -There, the addresses of ``a`` and ``b`` are provided to the function. Therefore, the ``swap`` function can know where to make changes to the actual values from the main function.  
--***The C in defualt only allows pass by value, if you want to pass by reference, we need to use pointer, so that's why we can't use &a &b in the swap function but *a and *b first.***   
+***The C in defualt only allows pass by value, if you want to pass by reference, we need to use pointer, so that's why we can't use &a &b in the swap function but *a and *b first.***   
 ![](/Users/angelaren/Documents/CS/Programming notes/Generals/CS50x/stack_pointers.png)  
  -When a function returns, the stack does not disappear, we still have remnants of all those values that were once there, unless the complier write over that memory. This is the problem, as the memory in stack is *free* as soon as the function returns the value, so it can be write over by other data at any moment, and the output will no longer be the original value. That's why we use ``malloc`` to make sure the value stick with us.  
    
    
-##Overflow  
+## Overflow  
 -A *heap overflow* is when you overflow the heap, touching areas of memory you are not suppsed to. It will write over other memory and causes data to be corrupted.  
 -A *stack overflow* is when too many functions are called, overflowing the amount of memory available.  
 -Both of these are considered *buffer overflows.*
 
-##Scanf  
+## Scanf  
 ***-It is important to keep in mind that if we want another function to be able to change my variable, we can't just hand it the variable, we have to hand it the address of our variable.***  
 -In, CS50, we have created functions like ``get_int`` to simplify the act of getting input from the user. ``scanf`` is a built-in function that can get user input, and we can reimplement ``get_int`` rather easily using ``scanf`` as follows:   
 
@@ -263,7 +263,7 @@
 -Howevery, attempting to reimplement ``get_string`` is not easy, as string is not an actual data type but an array of characters, which are act as pointers as well, so no ``&`` is required. We also don't know how many memory we need to allocate as we don't know how long of a string may be inputted by the user, and we don't know what garbage values may exist at the memory location.  
   
   
-##File I/O  
+## File I/O  
 -You can read from and manipulate files. While using C, we need pointer syntax to modify the files, there are a bunch of functions that come with C related to files. Any function that starts with an f probably means that it operates somehow on files, whether it's text files or binary files.  
 -There's a data type called ``FILE`` in all capital letters, we use this data type to manipulate files.  
 -We should get into the habit of checking return values. Any time pointers are involved from malloc, fopen and other functions asw, do not trust that they are valid until you have checked whether they are null or not.  
