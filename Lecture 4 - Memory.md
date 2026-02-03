@@ -26,7 +26,7 @@
  -A *pointer* is a variable that stores the address of something. Most succinctly, a pointer is an address in your computer's memory.  
  
  -就不要用指针理解，直接当运算符理解就行了。&就是取地址运算，``*`` 就是取该地址对应的值。也就是 ``*`` 是``&``的逆运算。只不过用``*``的时候要先定义。  
- ![](pointer.png)   
+ ![](images/pointer.png)   
   
  -When you create a variable or declare a variable for the first time, you specify not only star, but the type of the pointer, just like any other variable declaration. But when you use the pointer subsequently, you do not mention the data type.   
  
@@ -101,7 +101,7 @@
 	
 -However, when we run the program, both s and t were somehow capitalised for some reason, even though we only changed the first character of t. This is because that ``string t=s``copies the address of ``s`` to ``t`` instead of the string.  
 
-![](pointer_str.png)  
+![](images/pointer_str.png)  
 
 -As shown in the photo, ``s`` and ``t`` are still pointing at the same blocks of memory. This is not an authentic copy of a string. Instead these are two pointers pointing at the same string.   
 -Before we address this challenge, it's important to ensure that we don't experience a *segmentation fault* through our code, where we attempt to copy ``string s``to ``string t``, where ``string t`` does not exist. We can employ the ``strlen`` funciton as follows to assist with that, so only when ``string t`` has content things will be copied.   
@@ -206,11 +206,11 @@
 -However, the code above failed to swap the values of ``x`` and ``y``. Why? The answer is related to memory. This is because that for code like this, encapsulated in a function, is not correct precisely for the matter of scope because we'are changing the values of variables that are local to the swap function but has no effect on main that's actually using the function.  
 -This is because when we pass arguments to functions, you're generally passing things by value, which are the copies of those values, and there are no effect on the original versions of ``x`` and ``y``. So what swap really needs is a treasure map, so to speak, that leads it to the actual location of ``x`` and ``y`` using the ``*`` operator, so it can go there and swap the actual values inside of main's frame of memory.  
 -So, instead of doing pass by value, we want to pass by *reference* or pass by *address*. Why? In terms of the computer's memory, we has standardised how we use computers' memories when running programs, and we tend to use the memory at the top in certain ways and type of memory at the bottom in other ways.   
-![](leap_stack.png)  
+![](images/leap_stack.png)  
 -When we run the program, the computer automatically loads the machine code compiled into the top of the computer's memory relatively. Then, it loads the global variables defined outside of main, and goes below the machine. The ``malloc`` function we used to allocate memory also comes from this location here, below the global. This type of data storage that grows downwards, and more stuff gets filled up top to bottom are what we called ``heap``.  
 -The last region of memory are what we called the stack, its like a stack of trays in the cafeteria that works its way up as we continue putting stacks of tray and tray on top of each other, which the stack grows upward. It's like the guns clip，弹匣，先入后出，早放入的子弹最后才会被弹出。The heap and the stack are used differently. The heap is used for ``malloc``, or large and permanent type of data, and we have to free the memory when we don't need this data anymore manually.  
 -For stack on the other hand, we use it when we call a function or when we have local variables, they are for small data and need to be read quickly. The memory in stack are pop out and destroyed at the same time.   
-![](stack.png)  
+![](images/stack.png)  
 -Notice that ``main`` and ``swap`` have two separate *frames* or areas of memory. Therefore, we cannot simply pass the values from one function to another to change them, because only the copy is changed.  
 -So, the ``swap`` function is logically correct, but it has not been given access to the locations of ``x`` and ``y`` in memory. We need a pointer that leads to the actual location of ``x`` and ``y``, so using the ``*`` operator it can go there and swap the actual values inside of main's frame of memory.   
 
@@ -236,7 +236,7 @@
 	}  
 -There, the addresses of ``a`` and ``b`` are provided to the function. Therefore, the ``swap`` function can know where to make changes to the actual values from the main function.  
 ***The C in defualt only allows pass by value, if you want to pass by reference, we need to use pointer, so that's why we can't use &a &b in the swap function but *a and *b first.***   
-![](stack_pointers.png)  
+![](images/stack_pointers.png)  
  -When a function returns, the stack does not disappear, we still have remnants of all those values that were once there, unless the complier write over that memory. This is the problem, as the memory in stack is *free* as soon as the function returns the value, so it can be write over by other data at any moment, and the output will no longer be the original value. That's why we use ``malloc`` to make sure the value stick with us.  
    
    
